@@ -10,11 +10,11 @@ function escribir() {
     if (!isDeleting && index < texto.length) {
         nombreElement.innerText += texto.charAt(index);
         index++;
-        setTimeout(escribir, 150); // Velocidad de escritura
+        setTimeout(escribir, 70); // Velocidad de escritura
     } else if (isDeleting && index > 0) {
         nombreElement.innerText = texto.substring(0, index - 1);
         index--;
-        setTimeout(escribir, 100); // Velocidad de borrado
+        setTimeout(escribir, 70); // Velocidad de borrado
     } else {
         isDeleting = !isDeleting; // Cambiar de modo: escribir o borrar
         setTimeout(escribir, 1000); // Esperar un poco antes de empezar a borrar
