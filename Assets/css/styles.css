@@ -2,8 +2,37 @@ body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #3498db;
     line-height: 1.6;
-    color: #e5e5e5;
 }
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    border: 4px solid rgb(0, 119, 255);
+    border-radius: 6px;
+    background-color: #0b3f62;
+    padding: 2px;
+    width: 16%;
+    margin: 0 auto;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.navbar a {
+    color: #dedada;
+    text-decoration: none;
+}
+
+.navbar::after {
+    content: "Correo";
+    display: inline-block;
+    margin-left: 5px; 
+}
+
+.navbar:hover::after {
+    content: "Leandromanriquez709@gmail.com";
+}
+
+
 .descripcion-proyecto {
     display: none;
     font-size: 0.9em;
@@ -62,7 +91,7 @@ body {
 }
 
 .proyecto {
-    background-color: #3498db;
+    background-color: #0b3f62;
     border-radius: 8px;
     padding: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -88,7 +117,7 @@ body {
 .proyecto:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15);
-    border: 4px solid rgb(0, 202, 253);
+    border: 4px solid rgb(60, 216, 255);
     padding: 2px;
     transition: border-color 0.3 ease;
 }
