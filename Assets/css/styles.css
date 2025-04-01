@@ -22,15 +22,21 @@ body {
     text-decoration: none;
 }
 
-.navbar::after {
-    content: "Correo";
+.navbar .email-link {
+    position: relative;
     display: inline-block;
-    margin-left: 5px; 
 }
 
-.navbar:hover::after {
-    content: "Leandromanriquez709@gmail.com";
+.navbar .email-link::after {
+    content: "Correo"; /* Texto inicial */
+    display: inline-block;
+    margin-left: 5px; /* Un pequeño margen */
 }
+
+.navbar .email-link:hover::after {
+    content: "Leandromanriquez709@gmail.com"; /* Texto al pasar el cursor */
+}
+
 
 
 .descripcion-proyecto {

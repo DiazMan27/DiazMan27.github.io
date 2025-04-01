@@ -1,5 +1,5 @@
 // Cambio de nombre dinámico
-document.getElementById("nombre").innerText = "Leandro";
+document.getElementById("nombre").innerText = "";
 
 const nombreElement = document.getElementById("nombre");
 const texto = "Leandro"; // Nombre que se va a escribir y borrar
