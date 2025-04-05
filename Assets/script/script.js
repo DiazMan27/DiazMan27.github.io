@@ -1,25 +1,28 @@
-// Cambio de nombre dinámico
-document.getElementById("nombre").innerText = "";
+document.addEventListener('DOMContentLoaded', function() {
+    const nombreElement = document.getElementById("nombre");
+    const texto = "Leandro";
+    let index = 0;
+    let isDeleting = false;
+    let typingSpeed = 120;
+    let pauseTime = 2000;
 
-const nombreElement = document.getElementById("nombre");
-const texto = "Leandro"; // Nombre que se va a escribir y borrar
-let index = 0;
-let isDeleting = false;
-
-function escribir() {
-    if (!isDeleting && index < texto.length) {
-        nombreElement.innerText += texto.charAt(index);
-        index++;
-        setTimeout(escribir, 70); // Velocidad de escritura
-    } else if (isDeleting && index > 0) {
-        nombreElement.innerText = texto.substring(0, index - 1);
-        index--;
-        setTimeout(escribir, 70); // Velocidad de borrado
-    } else {
-        isDeleting = !isDeleting; // Cambiar de modo: escribir o borrar
-        setTimeout(escribir, 1000); // Esperar un poco antes de empezar a borrar
+    function escribir() {
+        const currentText = nombreElement.textContent;
+        
+        if (!isDeleting && index < texto.length) {
+            nombreElement.textContent = currentText + texto.charAt(index);
+            index++;
+            setTimeout(escribir, typingSpeed);
+        } else if (isDeleting && index > 0) {
+            nombreElement.textContent = currentText.substring(0, currentText.length - 1);
+            index--;
+            setTimeout(escribir, typingSpeed / 2);
+        } else {
+            isDeleting = !isDeleting;
+            setTimeout(escribir, isDeleting ? pauseTime : typingSpeed);
+        }
     }
-}
 
-escribir(); // Iniciar la animación
-
+    // Iniciar animación después de un breve retraso
+    setTimeout(escribir, 500);
+});

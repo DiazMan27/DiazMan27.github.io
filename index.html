@@ -1,60 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/css/styles.css">
     <link rel="icon" type="image/x-icon" href="Assets/img/icons8-user-16.png">
-    <title>Leandro Diaz</title>    
+    <title>Leandro Díaz | Desarrollador Web</title>    
 </head>
 
 <body>
+    <nav class="navbar">
+        <a href="mailto:Leandromanriquez709@gmail.com" class="email-link">Contacto</a>
+    </nav>
 
-    <div class="navbar">
-        <a href="mailto:Leandromanriquez709@gmail.com" class="email-link"></a>
-    </div>
+    <main class="container">
+        <header class="presentacion">
+            <img src="Assets/img/programmer_software_developer-1024.webp" alt="Leandro Díaz" class="logo">
+            <h1>Hola, soy <span id="nombre">Leandro</span></h1>
+            <p class="subtitulo">Desarrollador Web</p>
+            <p class="descripcion">Especializado en HTML, CSS y JavaScript. Cada día aprendiendo y mejorando mis habilidades.</p>
+        </header>
 
-    <header class="presentacion">
-        <img src="Assets/img/programmer_software_developer-1024.webp" alt="Logo de Leandro" class="logo">
-        <h1>Hola, soy <span id="nombre">Leandro</span></h1>
-        <strong>Desarrollador WEB</strong> y cada dia tratando de aprender lo mas
-        posible para seguir en este camino y generalmente uso solo <strong>HTML</strong>, <strong> CSS</strong> y
-        <strong>JS</strong>.
-    </header>
+        <section class="herramientas">
+            <h2>Tecnologías</h2>
+            <div class="tecnologias-grid">
+                <div class="tecnologia">
+                    <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="tecnologia">
+                    <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5">
+                    <span>HTML</span>
+                </div>
+                <div class="tecnologia">
+                    <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3">
+                    <span>CSS</span>
+                </div>
+                <div class="tecnologia">
+                    <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </section>
 
-    <section class="herramientas">
-        <h2>Tecnologias que Uso</h2>
-        <ul>
-            <li><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python"> Python</li>
-            <li><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5"> HTML</li>
-            <li><img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3"> CSS</li>
-            <li><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"> JavaScript</li>
-        </ul>
-    </section>
+        <section class="proyectos">
+            <h2>Proyectos</h2>
+            <div class="proyectos-grid">
+                <a href="https://github.com/DiazMan27/Periodico-Virtual" target="_blank" class="proyecto">
+                    <img src="Assets/img/noticias123.png" alt="Noticiero Virtual">
+                    <h3>Noticiero Virtual</h3>
+                </a>
 
-    <section class="proyectos">
-        <h2>PROYECTOS</h2>
-        <div class="proyectos-grid">
-            <a href="https://github.com/DiazMan27/Periodico-Virtual" target="_blank" class="proyecto">
-                <img src="Assets/img/noticias123.png" alt="Proyecto 1" style="background-color: aquamarine;">
-                <h3>Noticiero Virtual</h3>
-            </a>
+                <a href="https://github.com/DiazMan27/WowPageForStudy" target="_blank" class="proyecto">
+                    <img src="Assets/img/wowpage.png" alt="World of Warcraft Copy">
+                    <h3>World Of Warcraft Copy</h3>
+                </a>
 
-            <a href="https://github.com/DiazMan27/WowPageForStudy" target="_blank" class="proyecto">
-                <img src="Assets/img/wowpage.png" alt="Proyecto 2" style="background-color: bisque;">
-                <h3>World Of Warcraft Copy</h3>
-            </a>
+                <a href="https://github.com/DiazMan27/formulario" target="_blank" class="proyecto">
+                    <img src="Assets/img/formulario.png" alt="Formulario movible">
+                    <h3>Formulario movible</h3>
+                </a>
 
-            <a href="https://github.com/DiazMan27/formulario" target="_blank" class="proyecto">
-                <img src="Assets/img/formulario.png" alt="Proyecto 3">
-                <h3>Formulario movible</h3>
-            </a>
-
-            <a href="https://github.com/DiazMan27/Simple-traductor" target="_blank" class="proyecto">
-                <img src="Assets/img/traductor.png" alt="Proyecto 3">
-                <h3>Traductor</h3>
-            </a>
-        </div>
-    </section>
+                <a href="https://github.com/DiazMan27/Simple-traductor" target="_blank" class="proyecto">
+                    <img src="Assets/img/traductor.png" alt="Traductor">
+                    <h3>Traductor</h3>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <a href="https://github.com/DiazMan27" target="_blank" class="github-link">
@@ -64,6 +77,5 @@
     </footer>
 
     <script src="Assets/script/script.js"></script>
-
 </body>
 </html>
