@@ -14,9 +14,24 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--azul-primario);
+    background-color: #0a192f;
     color: #333;
     line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(52, 152, 219, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(11, 63, 98, 0.1) 0%, transparent 20%);
+    z-index: -1;
 }
 
 .container {
@@ -93,37 +108,108 @@ body {
     animation: typing 3s steps(30) infinite, blink 0.75s step-end infinite;
 }
 
-/* Sección Tecnologías */
+/* Sección Tecnologías mejorada */
 .herramientas {
-    padding: 60px 0;
-    background-color: var(--gris-medio);
+    padding: 80px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
 }
 
-.herramientas h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: var(--azul-primario);
+.tecnologias-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .tecnologias-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 30px;
-    max-width: 600px;
-    margin: 0 auto;
+    margin-top: 40px;
 }
 
 .tecnologia {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.tecnologia:nth-child(1) { animation-delay: 0.1s; }
+.tecnologia:nth-child(2) { animation-delay: 0.2s; }
+.tecnologia:nth-child(3) { animation-delay: 0.3s; }
+.tecnologia:nth-child(4) { animation-delay: 0.4s; }
+
+.tecnologia:hover {
+    transform: translateY(-5px);
+    background-color: rgba(52, 152, 219, 0.2);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
 .tecnologia img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.tecnologia:hover img {
+    transform: scale(1.1);
+}
+
+.tecnologia span {
+    font-weight: 500;
+    color: white;
+}
+
+/* Tooltip para tecnologías */
+.tecnologia::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.tecnologia:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-15px);
+}
+
+/* Efecto de partículas */
+.particle {
+    position: absolute;
+    background-color: rgba(52, 152, 219, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    animation: float 15s linear infinite;
 }
 
 /* Sección Proyectos */
@@ -197,6 +283,34 @@ footer {
     50% { border-color: transparent }
 }
 
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(20px);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .presentacion {
@@ -209,5 +323,14 @@ footer {
     
     .subtitulo {
         font-size: 1.2rem;
+    }
+    
+    .tecnologias-container {
+        padding: 20px;
+    }
+    
+    .tecnologias-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }
