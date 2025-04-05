@@ -212,52 +212,180 @@ body::before {
     animation: float 15s linear infinite;
 }
 
-/* Sección Proyectos */
+/* Sección Proyectos - Versión Minimalista */
 .proyectos {
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(52, 152, 219, 0.1);
+    border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+    border-radius: 3%;
 }
 
 .proyectos h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: var(--azul-primario);
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: var(--blanco);
+    font-weight: 300;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.proyectos h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: var(--azul-primario);
 }
 
 .proyectos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .proyecto {
-    background-color: var(--azul-oscuro);
-    border-radius: 8px;
+    background: transparent;
+    border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    color: var(--blanco);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    border: none;
+    box-shadow: none;
+}
+
+.proyecto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.proyecto:hover::before {
+    border-color: var(--azul-primario);
+    transform: scale(0.98);
+}
+
+.proyecto-img-container {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
 }
 
 .proyecto img {
     width: 100%;
-    height: 180px;
+    height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease;
-}
-
-.proyecto h3 {
-    padding: 15px;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.proyecto:hover {
-    transform: translateY(-5px);
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    opacity: 0.9;
 }
 
 .proyecto:hover img {
-    opacity: 0.9;
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.proyecto h3 {
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--blanco);
+    background: rgba(11, 63, 98, 0.2);
+    margin: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.proyecto:hover h3 {
+    background: rgba(11, 63, 98, 0.4);
+    color: var(--azul-primario);
+}
+
+.proyecto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 60%, rgba(11, 63, 98, 0.7) 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.proyecto:hover .proyecto-overlay {
+    opacity: 1;
+}
+
+.proyecto-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 20px;
+    background: var(--azul-primario);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 3;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.proyecto:hover .proyecto-btn {
+    opacity: 1;
+    bottom: 30px;
+}
+
+/* Efecto de aparición suave */
+.proyecto {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay para cada proyecto */
+.proyecto:nth-child(1) { animation-delay: 0.1s; }
+.proyecto:nth-child(2) { animation-delay: 0.2s; }
+.proyecto:nth-child(3) { animation-delay: 0.3s; }
+.proyecto:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .proyecto-img-container {
+        height: 180px;
+    }
 }
 
 /* Footer */
