@@ -390,16 +390,54 @@ body::before {
 }
 
 /* Footer */
-footer {
+.minimal-footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 0;
     text-align: center;
-    padding: 30px;
-    background-color: var(--azul-primario);
-    color: var(--blanco);
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.minimal-footer:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .github-link {
-    display: inline-block;
-    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.github-icon {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+    transition: all 0.3s ease;
+}
+
+.github-icon:hover {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.minimal-footer:hover .copyright {
+    opacity: 1;
 }
 
 /* Animaciones */
