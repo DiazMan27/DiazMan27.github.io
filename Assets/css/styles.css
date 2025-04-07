@@ -212,7 +212,7 @@ body::before {
     animation: float 15s linear infinite;
 }
 
-/* Sección Proyectos - Versión Minimalista */
+/* Sección Proyectos*/
 .proyectos {
     padding: 80px 0;
     text-align: center;
@@ -221,6 +221,7 @@ body::before {
     border-top: 1px solid rgba(52, 152, 219, 0.1);
     border-bottom: 1px solid rgba(52, 152, 219, 0.1);
     border-radius: 3%;
+    margin-bottom: 50px;
 }
 
 .proyectos h2 {

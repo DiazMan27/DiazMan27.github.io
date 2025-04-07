@@ -1,6 +1,6 @@
 // Efecto de partículas para el fondo
 function createParticles() {
-    const particleCount = 30;
+    const particleCount = 100;
     const container = document.body;
     
     for (let i = 0; i < particleCount; i++) {
