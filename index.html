@@ -1,111 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="Assets/img/icons8-user-16.png">
-    <title>Leandro Díaz | Desarrollador Web</title>    
+    <!-- METADATOS BÁSICOS -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+
+    <!-- RECURSOS EXTERNOS -->
+    <link rel="stylesheet" href="Assets/css/styles.css"> <!-- Hoja de estilos principal -->
+    <link rel="icon" type="image/x-icon" href="Assets/img/icons8-user-16.png"> <!-- Favicon -->
+
+    <!-- TÍTULO DE LA PÁGINA -->
+    <title>Leandro Díaz | Desarrollador Web</title>
 </head>
 
 <body>
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
     <nav class="navbar">
+        <!-- Enlace de contacto directo por email -->
         <a href="mailto:Leandromanriquez709@gmail.com" class="email-link">Contacto</a>
     </nav>
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="container">
-        <header class="presentacion">
-            <img src="Assets/img/programmer_software_developer-1024.webp" alt="Leandro Díaz" class="logo">
-            <h1>Hola, soy <span id="nombre"></span></h1>
-            <h2 class="subtitulo">Desarrollador Web</h2>
-            <button type="button" onclick="document.getElementById('sobremi').innerHTML = 'Soy Leandro, estudiante de la carrera tecnico en informatica '">Sobre mi</button>
-            <p id="sobremi">
-            </p>
-        </header>
+        <!-- DISEÑO DE DOS COLUMNAS -->
+        <div class="layout-grid">
+            <!-- COLUMNA IZQUIERDA - INFORMACIÓN PERSONAL -->
+            <aside class="personal-info">
+                <div class="presentacion">
+                    <!-- Foto de perfil -->
+                    <img src="Assets/img/programmer_software_developer-1024.webp" alt="Leandro Díaz" class="logo">
 
-        <section class="herramientas">
-            <div class="tecnologias-container">
-                <h2>Tecnologías</h2>
-                <div class="tecnologias-grid">
-                    <div class="tecnologia" data-tooltip="Usado en este proyecto">
-                        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5">
-                        <span>HTML</span>
+                    <!-- Título con efecto de escritura -->
+                    <h1>Hola, soy <span id="nombre"></span></h1>
+
+                    <!-- Subtítulo -->
+                    <h2 class="subtitulo">Desarrollador Web</h2>
+
+                    <!-- Botón "Sobre mí" con función JavaScript -->
+                    <button type="button"
+                        onclick="document.getElementById('sobremi').innerHTML = 'Soy Leandro, estudiante de 2do año de tecnico en informatica y me agrada la idea de ir aprendiendo haciendo pequeños proyectos para plasmar los conocimientos que voy adquiriendo.'">
+                        Sobre mi
+                    </button>
+                    <p id="sobremi"></p>
+
+                    <!-- SECCIÓN DE CONTACTO -->
+                    <div class="contacto-info">
+                        <a href="https://github.com/DiazMan27" target="_blank" class="contacto-link">
+                            <img src="https://img.icons8.com/ios-glyphs/24/3498db/github.png" alt="GitHub">
+                            GitHub/DiazMan27
+                        </a>
+                        <!-- Enlace a Instagram -->
+                        <a href="https://instagram.com/ljdm_ljdm" target="_blank" class="contacto-link">
+                            <img src="https://img.icons8.com/ios-glyphs/24/3498db/instagram-new.png" alt="Instagram">
+                            Instagram/ljdm_ljdm
+                        </a>
                     </div>
-                    <div class="tecnologia" data-tooltip="Usado este proyecto">
-                        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3">
-                        <span>CSS</span>
-                    </div>
-                    <div class="tecnologia" data-tooltip="Usado en este proyecto">
-                        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript">
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="tecnologia" data-tooltip="Python">
-                        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">
-                        <span>Python</span>
-                    </div>
+
                 </div>
+            </aside>
+
+            <!-- COLUMNA DERECHA - CONTENIDO PRINCIPAL -->
+            <div class="main-content">
+                <!-- SECCIÓN DE TECNOLOGÍAS -->
+                <section class="herramientas">
+                    <div class="tecnologias-container">
+                        <h2>Tecnologías</h2>
+                        <!-- Grid de tecnologías -->
+                        <div class="tecnologias-grid">
+                            <!-- Cada tecnología tiene icono, nombre y tooltip -->
+                            <div class="tecnologia" data-tooltip="Usado en este proyecto">
+                                <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5">
+                                <span>HTML</span>
+                            </div>
+                            <div class="tecnologia" data-tooltip="Usado este proyecto">
+                                <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3">
+                                <span>CSS</span>
+                            </div>
+                            <div class="tecnologia" data-tooltip="Usado en este proyecto">
+                                <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tecnologia" data-tooltip="Python">
+                                <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN DE PROYECTOS -->
+                <section class="proyectos">
+                    <div class="tecnologias-container">
+                        <h2>Proyectos Destacados</h2>
+                        <!-- Grid de proyectos -->
+                        <div class="proyectos-grid">
+                            <!-- Cada proyecto es un enlace a GitHub -->
+                            <a href="https://github.com/DiazMan27/Periodico-Virtual" target="_blank" class="proyecto">
+                                <div class="proyecto-img-container">
+                                    <img src="Assets/img/paguian de noticias.png" alt="Noticiero Virtual">
+                                    <!-- Overlay con efecto hover -->
+                                    <div class="proyecto-overlay"></div>
+                                    <span class="proyecto-btn">Ver Proyecto</span>
+                                </div>
+                                <h3>Noticiero Virtual</h3>
+                            </a>
+
+                            <a href="https://github.com/DiazMan27/WowPageForStudy" target="_blank" class="proyecto">
+                                <div class="proyecto-img-container">
+                                    <img src="Assets/img/fotowow.png" alt="World of Warcraft Copy">
+                                    <div class="proyecto-overlay"></div>
+                                    <span class="proyecto-btn">Ver Proyecto</span>
+                                </div>
+                                <h3>World of Warcraft Copy</h3>
+                            </a>
+
+                            <a href="https://github.com/DiazMan27/formulario" target="_blank" class="proyecto">
+                                <div class="proyecto-img-container">
+                                    <img src="Assets/img/formulario.png" alt="Formulario movible">
+                                    <div class="proyecto-overlay"></div>
+                                    <span class="proyecto-btn">Ver Proyecto</span>
+                                </div>
+                                <h3>Formulario Interactivo</h3>
+                            </a>
+
+                            <a href="https://github.com/DiazMan27/Simple-traductor" target="_blank" class="proyecto">
+                                <div class="proyecto-img-container">
+                                    <img src="Assets/img/traductor.png" alt="Traductor Simple">
+                                    <div class="proyecto-overlay"></div>
+                                    <span class="proyecto-btn">Ver Proyecto</span>
+                                </div>
+                                <h3>Traductor Simple</h3>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN DE EXPERIENCIA -->
+                <section class="experiencia">
+                    <div class="tecnologias-container">
+                        <h2>Experiencia Reciente</h2>
+                        <div class="experiencia-grid">
+                            <!-- Cada ítem de experiencia -->
+                            <div class="experiencia-item">
+                                <h3>Proyectos Académicos</h3>
+                                <p class="fecha">2024 - 2025</p>
+                                <p>Desarrollo de diversos proyectos como parte de mi formación técnica con tecnologias
+                                    como C# y python.</p>
+                            </div>
+                            <div class="experiencia-item">
+                                <h3>Desarrollo de Aplicaciones Web</h3>
+                                <p class="fecha">2025 - Presente</p>
+                                <p>Creación de aplicaciones web responsivas con HTML, CSS y JavaScript. Implementación
+                                    de funcionalidades interactivas y optimización de rendimiento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
-
-        <section class="proyectos">
-            <h2>Proyectos Destacados</h2>
-            <div class="proyectos-grid">
-                <a href="https://github.com/DiazMan27/Periodico-Virtual" target="_blank" class="proyecto">
-                    <div class="proyecto-img-container">
-                        <img src="Assets/img/paguian de noticias.png" alt="Noticiero Virtual">
-                        <div class="proyecto-overlay"></div>
-                        <span class="proyecto-btn">Ver Proyecto</span>
-                    </div>
-                    <h3>Noticiero Virtual</h3>
-                </a>
-
-                <a href="https://github.com/DiazMan27/WowPageForStudy" target="_blank" class="proyecto">
-                    <div class="proyecto-img-container">
-                        <img src="Assets/img/fotowow.png" alt="World of Warcraft Copy">
-                        <div class="proyecto-overlay"></div>
-                        <span class="proyecto-btn">Ver Proyecto</span>
-                    </div>
-                    <h3>World of Warcraft Copy</h3>
-                </a>
-
-                <a href="https://github.com/DiazMan27/formulario" target="_blank" class="proyecto">
-                    <div class="proyecto-img-container">
-                        <img src="Assets/img/formulario.png" alt="Formulario movible">
-                        <div class="proyecto-overlay"></div>
-                        <span class="proyecto-btn">Ver Proyecto</span>
-                    </div>
-                    <h3>Formulario Interactivo</h3>
-                </a>
-
-                <a href="https://github.com/DiazMan27/Simple-traductor" target="_blank" class="proyecto">
-                    <div class="proyecto-img-container">
-                        <img src="Assets/img/traductor.png" alt="Traductor Simple">
-                        <div class="proyecto-overlay"></div>
-                        <span class="proyecto-btn">Ver Proyecto</span>
-                    </div>
-                    <h3>Traductor Simple</h3>
-                </a>
-
-                <a href="https://github.com/DiazMan27/RelogInteractivo.github.io" target="_blank" class="proyecto">
-                    <div class="proyecto-img-container">
-                        <img src="Assets/img/reloginteractivo.png" alt="Relog Interactivo">
-                        <div class="proyecto-overlay"></div>
-                        <span class="proyecto-btn">Ver Proyecto</span>
-                    </div>
-                    <h3>Relog Interactivo</h3>
-                </a>
-            </div>
-        </section>
+        </div>
     </main>
 
+    <!-- PIE DE PÁGINA -->
     <footer class="minimal-footer">
         <div class="footer-content">
-            <a href="https://github.com/DiazMan27" target="_blank" class="github-link">
-                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="GitHub" class="github-icon">
-            </a>
             <p class="copyright">&copy; 2025 Leandro Díaz Manriquez</p>
         </div>
     </footer>
+
+    <!-- SCRIPTS -->
     <script src="Assets/script/script.js"></script>
 </body>
+
 </html>
