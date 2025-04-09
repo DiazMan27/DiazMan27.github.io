@@ -18,9 +18,9 @@
     <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
     <nav class="navbar">
         <!-- Enlace de contacto directo por email -->
-        <a href="mailto:Leandromanriquez709@gmail.com" class="email-link">Contacto</a>
+        <a href="mailto:Leandromanriquez709@gmail.com" class="email-link" title="Haz click para contactarte conmigo">Contacto</a>
     </nav>
-
+    
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container">
         <!-- DISEÑO DE DOS COLUMNAS -->
@@ -39,22 +39,26 @@
 
                     <!-- Botón "Sobre mí" con función JavaScript -->
                     <button type="button"
-                        onclick="document.getElementById('sobremi').innerHTML = 'Soy Leandro, estudiante de 2do año de tecnico en informatica y me agrada la idea de ir aprendiendo, haciendo pequeños proyectos para plasmar los conocimientos que voy adquiriendo.'">
+                        onclick="document.getElementById('sobremi').innerHTML = 'Soy Leandro, estudiante de 2do año de tecnico en informatica y me agrada la idea de ir aprendiendo, haciendo pequeños proyectos para plasmar los conocimientos que voy adquiriendo.'" title="Haz clic para ver más información sobre mí">
                         Sobre mi
                     </button>
                     <p id="sobremi"></p>
 
                     <!-- SECCIÓN DE CONTACTO -->
                     <div class="contacto-info">
-                        <a href="https://github.com/DiazMan27" target="_blank" class="contacto-link">
+                        <a href="https://github.com/DiazMan27" target="_blank" class="contacto-link" title="Haz clic para ver mi perfil de GitHub">
                             <img src="https://img.icons8.com/ios-glyphs/24/3498db/github.png" alt="GitHub">
                             GitHub/DiazMan27
                         </a>
                         <!-- Enlace a Instagram -->
-                        <a href="https://instagram.com/ljdm_ljdm" target="_blank" class="contacto-link">
+                        <a href="https://instagram.com/ljdm_ljdm" target="_blank" class="contacto-link" title="Haz clic para ver mi perfil de Instagram">
                             <img src="https://img.icons8.com/ios-glyphs/24/3498db/instagram-new.png" alt="Instagram">
                             Instagram/ljdm_ljdm
                         </a>
+
+                        <input type="button" value="Descargar CV" class="descargar-cv" onclick="window.location.href='Assets/Leandro_Diaz_CV.pdf'"
+                            title="Haz clic para descargar mi CV">
+
                     </div>
 
                 </div>
