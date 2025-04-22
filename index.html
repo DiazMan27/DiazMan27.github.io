@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Leandro Díaz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="Assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="container">
+        <button class="theme-toggle" aria-label="Cambiar tema" title="Has click y cambia de tema la pagina">
+            <i class="fas fa-moon"></i>
+        </button>
+        <h1>Leandro Díaz</h1>
+        <nav>
+            <ul>
+                <li><a href="#about" title="Haz click para conocerme mas">Sobre mí</a></li>
+                <li><a href="#skills" title="Aqui podras encontrar las habilidades que tengo">Habilidades</a></li>
+                <li><a href="#projects" title="Vee algunos de mis proyectos principales">Proyectos</a></li>
+                <li><a href="#contact" title="Contactate conmigo si tienes alguna duda">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <div class="about-content">
+                <p>Hola! Soy Leandro Díaz, actualmente vivo en Carahue, Chile. Estoy estudiando técnico en informática en la Universidad Católica de Temuco, y mis aspiraciones son poder mejorar mis habilidades en el diseño web.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container">
+        <h2>Habilidades</h2>
+        <div class="skills-container">
+            <button id="toggleSkills" class="toggle-btn" title="Haz click para ver mi demas habilidades">Mostrar Herramientas</button>
+            <div id="skillsDisplay" class="skills-grid"></div>
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://www.ncsa.es/wp-content/uploads/2022/01/Traductor-online-2.jpg" alt="Un simple traductor multilenguaje">
+                    </div>
+                    <div class="project-info">
+                        <h3>Traductor</h3>
+                        <p>Aplicación para traducir texto entre diferentes idiomas con soporte para múltiples lenguajes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="https://github.com/DiazMan27/Simple-traductor.git" title="Aqui podras ver el codigo del proyecto en github"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://th.bing.com/th/id/OIP.9lX5w5sTGTx-dedbwoZrcQHaDY?w=800&h=365&rs=1&pid=ImgDetMain" alt="Un noticiero virtual para practicar html y css">
+                    </div>
+                    <div class="project-info">
+                        <h3>Noticiero Virtual</h3>
+                        <p>Plataforma de noticias con actualizaciones en tiempo real y análisis de eventos importantes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="https://github.com/DiazMan27/NoticieroVirtual.github.io.git" title="Aqui podras ver el codigo del proyecto en github"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://th.bing.com/th/id/OIP.hCjy8l0CSPNaRJH5uT_N8gHaHa?rs=1&pid=ImgDetMain" alt="Una landing page con servicios a ofrecer junto a un formulario echo con JavaScript">
+                    </div>
+                    <div class="project-info">
+                        <h3>Landing Page</h3>
+                        <p>Página de aterrizaje dinámica con formulario en JavaScript.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://teclab.uct.cl/~leandro.diaz/trabajos/indexLandingPage.html" title="Aqui podras ver una demo del proyecto"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="https://github.com/DiazMan27/landingPage" title="Aqui podras ver el codigo del proyecto en github"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Pongámonos en contacto</h3>
+                    <p>Si tienes algún proyecto en mente o quieres consultarme algo, no dudes en escribirme.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Correo</h4>
+                                <a href="mailto:leandromanriquez709@gmail.com">leandromanriquez709@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/DiazMan27" class="social-link" target="_blank" title="Presiona para ver mi github juntos a mis proyectos"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com/ljdm_ljdm" class="social-link" target="_blank"><i class="fab fa-instagram" title="Conoceme en instagram :D"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" class="form-control" required title="Ingrese su nombre completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required title="Ingrese su correo ">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" class="form-control" required title="El servicio que necesita">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" class="form-control" required title="Escribame un mensaje detallandome mas lo que necesita"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" title="Has click para confirma el envio">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-code"></i>
+                    <span>LeanCode</span>
+                </div>
+                <div class="footer-copy">
+                    &copy; <span id="current-year"></span> Leandro Díaz. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Assets/js/script.js"></script>
+</body>
+</html>
