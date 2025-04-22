@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Leandro Díaz</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="Assets/css/stylesPortFolio.css">
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport para diseño responsive -->
+    <title>Portfolio | Leandro Díaz</title> <!-- Título que aparece en la pestaña del navegador -->
+    
+    <!-- Enlaces a hojas de estilo y fuentes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="Assets/css/stylesPortFolio.css"> <!-- Hoja de estilos personalizada -->
 </head>
 <body>
-    <!-- Header -->
+    <!-- Encabezado de la página -->
     <header class="container">
+        <!-- Botón para cambiar el tema (claro/oscuro) -->
         <button class="theme-toggle" aria-label="Cambiar tema" title="Has click y cambia de tema la pagina">
-            <i class="fas fa-moon"></i>
+            <i class="fas fa-moon"></i> <!-- Icono de luna (tema oscuro) -->
         </button>
-        <h1>Leandro Díaz</h1>
+        
+        <!-- Título principal -->
+        <h1>LeanCode</h1>
+        
+        <!-- Navegación principal -->
         <nav>
             <ul>
+                <!-- Enlaces internos a las diferentes secciones -->
                 <li><a href="#about" title="Haz click para conocerme mas">Sobre mí</a></li>
                 <li><a href="#skills" title="Aqui podras encontrar las habilidades que tengo">Habilidades</a></li>
                 <li><a href="#projects" title="Vee algunos de mis proyectos principales">Proyectos</a></li>
@@ -24,33 +33,36 @@
         </nav>
     </header>
 
-    <!-- About Me Section -->
+    <!-- Sección "Sobre mí" -->
     <section id="about">
         <div class="container">
             <h2>Sobre mí</h2>
             <div class="about-content">
+                <!-- Breve descripción personal -->
                 <p>Hola! Soy Leandro Díaz, actualmente vivo en Carahue, Chile. Estoy estudiando técnico en informática en la Universidad Católica de Temuco, y mis aspiraciones son poder mejorar mis habilidades en el diseño web.</p>
             </div>
         </div>
     </section>
 
-<!-- Skills Section -->
-<section id="skills">
-    <div class="container">
-        <h2>Habilidades</h2>
-        <div class="skills-container">
-            <button id="toggleSkills" class="toggle-btn" title="Haz click para ver mi demas habilidades">Mostrar Herramientas</button>
-            <div id="skillsDisplay" class="skills-grid"></div>
+    <!-- Sección de Habilidades -->
+    <section id="skills">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <!-- Botón para mostrar/ocultar habilidades adicionales -->
+                <button id="toggleSkills" class="toggle-btn" title="Haz click para ver mi demas habilidades">Mostrar Herramientas</button>
+                <!-- Contenedor donde se mostrarán las habilidades (se llena dinámicamente con JS) -->
+                <div id="skillsDisplay" class="skills-grid"></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Projects Section -->
+    <!-- Sección de Proyectos -->
     <section id="projects">
         <div class="container">
             <h2>Proyectos Destacados</h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
+                <!-- Tarjeta de proyecto 1: Traductor -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://www.ncsa.es/wp-content/uploads/2022/01/Traductor-online-2.jpg" alt="Un simple traductor multilenguaje">
@@ -59,18 +71,20 @@
                         <h3>Traductor</h3>
                         <p>Aplicación para traducir texto entre diferentes idiomas con soporte para múltiples lenguajes.</p>
                         <div class="project-tech">
+                            <!-- Tecnologías usadas en el proyecto -->
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
+                            <!-- Enlaces a demo y código -->
                             <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
                             <a href="https://github.com/DiazMan27/Simple-traductor.git" title="Aqui podras ver el codigo del proyecto en github"><i class="fab fa-github"></i> Código</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
+                <!-- Tarjeta de proyecto 2: Noticiero Virtual -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://th.bing.com/th/id/OIP.9lX5w5sTGTx-dedbwoZrcQHaDY?w=800&h=365&rs=1&pid=ImgDetMain" alt="Un noticiero virtual para practicar html y css">
@@ -90,7 +104,7 @@
                     </div>
                 </div>
                 
-                <!-- Project 3 -->
+                <!-- Tarjeta de proyecto 3: Landing Page -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://th.bing.com/th/id/OIP.hCjy8l0CSPNaRJH5uT_N8gHaHa?rs=1&pid=ImgDetMain" alt="Una landing page con servicios a ofrecer junto a un formulario echo con JavaScript">
@@ -113,15 +127,17 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Sección de Contacto -->
     <section id="contact">
         <div class="container">
             <h2>Contacto</h2>
             <div class="contact-content">
+                <!-- Información de contacto -->
                 <div class="contact-info">
                     <h3>Pongámonos en contacto</h3>
                     <p>Si tienes algún proyecto en mente o quieres consultarme algo, no dudes en escribirme.</p>
                     
+                    <!-- Métodos de contacto -->
                     <div class="contact-methods">
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -134,12 +150,14 @@
                         </div>
                     </div>
                     
+                    <!-- Redes sociales -->
                     <div class="social-links">
                         <a href="https://github.com/DiazMan27" class="social-link" target="_blank" title="Presiona para ver mi github juntos a mis proyectos"><i class="fab fa-github"></i></a>
                         <a href="https://instagram.com/ljdm_ljdm" class="social-link" target="_blank"><i class="fab fa-instagram" title="Conoceme en instagram :D"></i></a>
                     </div>
                 </div>
                 
+                <!-- Formulario de contacto -->
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
@@ -165,14 +183,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Pie de página -->
     <footer>
         <div class="container">
             <div class="footer-content">
+                <!-- Logo/marca del footer -->
                 <div class="footer-logo">
                     <i class="fas fa-code"></i>
                     <span>LeanCode</span>
                 </div>
+                <!-- Información de copyright -->
                 <div class="footer-copy">
                     &copy; <span id="current-year"></span> Leandro Díaz. Todos los derechos reservados.
                 </div>
@@ -180,6 +200,7 @@
         </div>
     </footer>
 
+    <!-- Scripts JavaScript -->
     <script src="Assets/js/scripPortFolio.js"></script>
 </body>
 </html>
